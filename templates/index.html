@@ -1,19 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TalonQuest</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css
+">
 </head>
 <body>
-    <div>
-        {% block content %}
-        <h1>API Test - Home Page</h1>
-        <p>Hello {{ name }}</p>
-        <p></p>
-        <p>Try /profile?object=something in the URL</p>
-        {% endblock %}
+<nav class="navbar has-shadow is-white">
+    <!-- logo / brand -->
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <img src="static/avicon.jpeg" alt="temp logo"
+                 style="max-height: 70px" class="py-2 px-2">
+        </a>
+        <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
     </div>
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+            <a class="navbar-item">Account</a>
+            <a class="navbar-item">Info</a>
+        </div>
+    </div>
+</nav>
+    <!-- breadcrumbs -->
+    <div class="section pt-4 pb-0">
+        <nav class="breadcrumb">
+            <ul class="container">
+                <li><a>Home</a></li>
+                <li><a>Ideas</a></li>
+                <li class="is-active"><a>Dolphin</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- main content -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-vcentered is-multiline">
+                <div class="column is-6-tablet is-3-desktop">
+                    <h1 class="is-size-3-mobile is-size-1-desktop title">Dolphin</h1>
+                    <h2 class="is-size-4-mobile is-size-3-desktop subtitle">Dive 04</h2>
+                    <p>Almost ready for primetime</p>
+                </div>
+                <div class="column is-6-tablet is-6-desktop has-text-centered">
+                    <img src="static/dolphin.png" alt="dolphin image" class="px-6">
+                </div>
+                <div class="column is-12-tablet is-3-desktop">
+                    <div class="is-size-4 mb-4">Notes</div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis voluptas doloribus dignissimos sed sint, quos aperiam omnis officia provident, possimus dolor qui animi aliquid alias temporibus nemo fugit soluta cumque!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-8 is-variable">
+                <div class="column is-6-tablet">
+                    <!-- tabbed content -->
+                    <div class="tabs is-boxed">
+                        <ul>
+                            <li class="is-active" data-target="approach">
+                                <a>Approach</a>
+                            </li>
+                            <li data-target="background">
+                                <a>Background</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="px-2" id="tab-content">
+                        <div id="approach">
+                            <h3 class="is-size-5 title">Approach</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet sed, non rerum qui maiores enim eveniet in, 
+                            a animi modi reprehenderit blanditiis praesentium illo consequuntur dolores nam quos iure.</p>
+                        </div>
+                        <div id="background" class="is-hidden">
+                        <h3 class="is-size-5 title">Background</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet sed, non rerum qui maiores enim eveniet in,
+                            a animi modi reprehenderit blanditiis praesentium illo consequuntur dolores nam quos iure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6-tablet">
+                    <!-- message box -->
+                    <div class="message">
+                        <div class="message-header">
+                            <p>Latest News</p>
+                        </div>
+                        <div class="message-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore amet sed, non rerum qui maiores enim eveniet in,
+                                a animi modi reprehenderit blanditiis praesentium illo consequuntur dolores nam quos iure.</p>
+                            <div class="has-text-centered">
+                                <button class="button mt-4">Refresh</button>
+                            </div>   
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Copyright 2023 TalonQuest</p>
+        </div>
+    </footer>
+
+    <script src="static/index.js"></script>
 </body>
 </html>
